@@ -4,7 +4,7 @@ A program that sorts an array from minimum to maximum
 
 import java.util.Scanner;
 
-public class test {
+public class bubbleSort {
     public static void main(String[] args) {
         System.out.print("Enter array length : ");
         Scanner scan1 = new Scanner(System.in);
