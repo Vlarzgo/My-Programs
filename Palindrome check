@@ -4,7 +4,7 @@ A program that checks if a string is palindrome
 
 import java.util.Scanner;
 
-public class test {
+public class palindromeCheckLine {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
