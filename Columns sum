@@ -8,7 +8,7 @@ columns are the same - output the result in the form:
 
 import java.util.Scanner;
 
-public class test {
+public class columnsSum {
     public static void main(String[] args) {
         System.out.print("Enter the length of the first array : ");
         Scanner scan1 = new Scanner(System.in);
