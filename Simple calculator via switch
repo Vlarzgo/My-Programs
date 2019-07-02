@@ -4,7 +4,7 @@ Simple calculator via switch
 
 import java.util.Scanner;
 
-public class test {
+public class switchCalculator {
     public static void main(String[] args) {
         System.out.print("Enter you number v1 : ");
         Scanner scan2 = new Scanner(System.in);
