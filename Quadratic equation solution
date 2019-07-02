@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class quadraticEquationsSolution {
+    /*
+    A program that solves quadratic equations a*x^2 + b*x + c = 0
+    */
+    public static void main(String[] args) {
+        System.out.println("a * x^2 + b * x + c = 0");
+        System.out.print("Enter a : ");
+        Scanner scan1 = new Scanner(System.in);
+        double a = scan1.nextInt();
+
+        System.out.print("Enter b : ");
+        Scanner scan2 = new Scanner(System.in);
+        double b = scan2.nextInt();
+
+        System.out.print("Enter c : ");
+        Scanner scan3 = new Scanner(System.in);
+        double c = scan3.nextInt();
+
+        double x, x1, x2, d;
+        d = b * b - 4 * a * c;
+        x1 = ((0 - b) - Math.sqrt(d)) / (2 * a);
+        x2 = ((0 - b) + Math.sqrt(d)) / (2 * a);
+
+
+        if (a == 0) {
+            if (b != 0 && c != 0) {
+                x = (0 - c) / b;
+                System.out.println("The x = " + x);
+            } else if (b == 0 && c != 0)
+                System.out.println("Mistake " + c + " != 0");
+            else if (b != 0 && c == 0)
+                System.out.println("The x = 0");
+            else if (b == 0 && c == 0)
+                System.out.println("The x is any number");
+        } else if (d < 0)
+            System.out.println("There is no solution");
+        else if (d == 0)
+            System.out.println("x1 = x2 = " + x1);
+        else if (d > 0) {
+            System.out.println("x1 = " + x1);
+            System.out.println("x2 = " + x2);
+        }
+
+
+    }
+}
+
+
