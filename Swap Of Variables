@@ -1,0 +1,27 @@
+/*
+Classical swap of variables among themselves
+ */
+public class variavlesSwap {
+    public static void main(String[] args) {
+        int a, b, c;
+
+        a = 5;
+        b = 7;
+
+        System.out.println("With the third variable ");
+        c = a;
+        a = b;
+        b = c;
+        System.out.println("My A is - " + a);
+        System.out.println("My B is - " + b);
+
+        System.out.println("Without the third variable");
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("My A is - " + a);
+        System.out.println("My B is - " + b);
+
+
+    }
+}
