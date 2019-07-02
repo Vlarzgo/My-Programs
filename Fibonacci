@@ -1,0 +1,29 @@
+/*
+A program that outputs all Fibonacci numbers to given number
+ */
+
+import java.util.Scanner;
+
+public class fibonacci {
+    public static void main(String[] args) {
+
+        System.out.print("Enter the Fibonacci limit value: ");
+        Scanner scan1 = new Scanner(System.in);
+        int a = scan1.nextInt();
+        int fib0 = 0;
+        int fib1 = 1;
+        int fibx;
+
+        System.out.print(fib0 + " " + fib1 + " ");
+        do {
+            fibx = fib1 + fib0;
+            fib0 = fib1;
+            fib1 = fibx;
+            if (fibx >= a)
+                break;
+            System.out.print(fibx + " ");
+        }
+        while (fibx <= a);
+
+    }
+}
