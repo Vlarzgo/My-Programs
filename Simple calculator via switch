@@ -1,0 +1,43 @@
+/*
+Simple calculator via switch
+*/
+
+import java.util.Scanner;
+
+public class test {
+    public static void main(String[] args) {
+        System.out.print("Enter you number v1 : ");
+        Scanner scan2 = new Scanner(System.in);
+        int v1 = scan2.nextInt();
+
+        System.out.print("Enter you number v2: ");
+        Scanner scan3 = new Scanner(System.in);
+        int v2 = scan3.nextInt();
+
+        System.out.print("Enter you char : ");
+        Scanner scan = new Scanner(System.in);
+        char c = scan.next().charAt(0);
+
+        int v3;
+
+        switch (c) {
+            case '+':
+                v3 = v1 + v2;
+                System.out.println("You result is :" + v3);
+                break;
+            case '-':
+                v3 = v1 - v2;
+                System.out.println("You result is :" + v3);
+                break;
+            case '*':
+                v3 = v1 * v2;
+                System.out.println("You result is :" + v3);
+                break;
+            case '/':
+                v3 = v1 / v2;
+                System.out.println("You result is :" + v3);
+                break;
+
+        }
+    }
+}
