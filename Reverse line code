@@ -1,0 +1,27 @@
+/*
+Program that displays the reverse line
+with char array []
+ */
+
+import java.util.Scanner;
+
+public class reverseLine {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter sentence  : ");
+        String word = scan.nextLine();
+        char a[] = word.toCharArray();
+        char b[] = new char[word.length()];
+
+        int j = word.length();
+        System.out.print("Reversed : ");
+
+        for (int i = 0; i < word.length(); i++) {
+            j = j - 1;
+            b[j] = a[i];
+        }
+        for (int i = 0; i < word.length(); i++)
+            System.out.print(b[i]);
+    }
+}
