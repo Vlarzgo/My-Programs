@@ -1,0 +1,67 @@
+/*
+
+A program that converts various lengths by calling methods in methods
+
+according to the scheme below
+
+Miles       ->  inches
+  /\              ||
+  ||              \/
+Kilometers  <-  Meters
+ */
+
+import java.util.Scanner;
+
+public class lengthConvertor {
+    public static void main(String[] args) {
+        System.out.print("Enter Meters : ");
+        Scanner scanm = new Scanner(System.in);
+        double m = scanm.nextDouble();
+        System.out.println("In inches     : " + mToKm(kmToMil(milToD(m))));
+        System.out.println("In miles      : " + mToKm(kmToMil(m)));
+        System.out.println("In kilometers : " + mToKm(m));
+
+        System.out.print("Enter inches : ");
+        Scanner scand = new Scanner(System.in);
+        double d = scand.nextDouble();
+        System.out.println("In meters     : " + dToM(d));
+        System.out.println("In miles      : " + dToM(mToKm(kmToMil(d))));
+        System.out.println("In kilometers : " + dToM(mToKm(d)));
+
+        System.out.print("Enter miles: ");
+        Scanner scanmil = new Scanner(System.in);
+        double mil = scanmil.nextDouble();
+        System.out.println("In inches     : " + milToD(mil));
+        System.out.println("In meters     : " + milToD(dToM(mil)));
+        System.out.println("In kilometers : " + milToD(dToM(mToKm(mil))));
+
+        System.out.print("Enter kilometers : ");
+        Scanner scankm = new Scanner(System.in);
+        double km = scankm.nextDouble();
+        System.out.println("In inches     : " + kmToMil(milToD(km)));
+        System.out.println("In miles      : " + kmToMil(km));
+        System.out.println("In meters     : " + kmToMil(milToD(dToM(km))));
+
+    }
+
+    public static double milToD(double x) {
+        x = x * 63360;
+        return x;
+    }
+
+    public static double dToM(double x) {
+        x = x / 39.37;
+        return x;
+    }
+
+    public static double mToKm(double x) {
+        x = x / 1000;
+        return x;
+    }
+
+    public static double kmToMil(double x) {
+        x = x / 1.609;
+        return x;
+    }
+
+}
